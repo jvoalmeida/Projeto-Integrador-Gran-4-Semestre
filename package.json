@@ -1,0 +1,19 @@
+{
+  "name": "projeto-integrador-gran-4-semestre",
+  "version": "1.0.0",
+  "description": "Projeto Integrador do Gran (4º Semestre)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvoalmeida/Projeto-Integrador-Gran-4-Semestre.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvoalmeida/Projeto-Integrador-Gran-4-Semestre/issues"
+  },
+  "homepage": "https://github.com/jvoalmeida/Projeto-Integrador-Gran-4-Semestre#readme"
+}
