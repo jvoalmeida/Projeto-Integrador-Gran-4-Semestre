@@ -1,19 +1,23 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((req, res) => {
+const app = express();
 
-// Inseri a codificação UTF-8 para evitar problemas de codificação de caracteres.
-    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+// Permite receber dados em JSON
+app.use(express.json());
 
-    res.end('Olá, Mundo!');
+// Importa as rotas 
+const produtoRoutes = require('./routes/produtoRoutes');
+const fornecedorRoutes = require('./routes/fornecedorRoutes');
+const produtoFornecedorRoutes = require('./routes/produtoFornecedorRoutes');
 
-});
 
+// Define as rotas principais
+app.use('/produtos', produtoRoutes);
+app.use('/fornecedores', fornecedorRoutes);
+app.use('/produto-fornecedor', produtoFornecedorRoutes);
 
 const PORT = 3000;
 
-server.listen(PORT, () => {
-
-    console.log(`Servidor rodando em http://localhost:${PORT}/`);
-
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
